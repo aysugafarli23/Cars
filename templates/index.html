@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>TaskCode: Cars</title>
 </head>
 <body>
-    <h1>Owners</h1>
+    <div class="container">
+        <h1>Owners</h1>
     <ul>
         {% for owner in owners %}
             <li>{{ owner.owner.username }}</li>
@@ -26,5 +29,6 @@
             <li>{{ rentacar.company_name }}</li>
         {% endfor %}
     </ul>
+    </div>
 </body>
 </html>
